@@ -1,15 +1,15 @@
 <template>
-  <HelloWorld message="Vue 3 + TypeScript + Vite + WindiCSS + Eslint" />
+  <MDButton />
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import HelloWorld from './components/HelloWorld.vue';
+  import MDButton from './Button.md';
 
   export default defineComponent({
     name: 'App',
     components: {
-      HelloWorld
+      MDButton
     }
   });
 </script>

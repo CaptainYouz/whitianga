@@ -8,17 +8,21 @@ module.exports = {
   extends: [
     'plugin:vue/vue3-recommended',
     'airbnb-base',
-    '@vue/typescript/recommended'
+    '@vue/typescript/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   parserOptions: {
-    ecmaVersion: 2021
+    ecmaVersion: 2021,
+    parser: '@typescript-eslint/parser'
   },
+  plugins: [ '@typescript-eslint' ],
   overrides: [
     {
       files: [ '*.vue' ],
       rules: {
         indent: 'off'
-      }
+      },
+      parser: 'vue-eslint-parser'
     }
   ],
   rules: {
@@ -27,6 +31,7 @@ module.exports = {
     'block-spacing': [ 'error', 'always' ],
     'comma-dangle': [ 'error', { functions: 'never' } ],
     'import/first': 'error',
+    'import/extensions': 'off',
     'import/no-absolute-path': 'off',
     'import/no-extraneous-dependencies': [ 'error', { devDependencies: true } ],
     'import/no-unresolved': 'off',
