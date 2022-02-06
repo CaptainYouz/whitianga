@@ -2,4 +2,4 @@
 
 This is the Whithianga Button
 
-<w-button />
+<w-button>Click Me</w-button>
